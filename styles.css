@@ -59,10 +59,7 @@ body {
 }
 
 header {
-    height: 100vh;
     background-color: var(--main-50-color);
-    display: flex;
-    flex-direction: column;
 }
 
 .logo-text, nav a{
@@ -137,10 +134,12 @@ input[type="search"]:focus {
     color: var(--light-color);
 }
 
-header .container {
-    flex: auto;
+.main-section {
+    height: 100vh;
+    background-color: var(--main-50-color);
     gap: 6rem;
     color: var(--main-color);
+    align-content: center;
 }
 
 .btn-solid,
@@ -148,10 +147,17 @@ header .container {
     background-color: var(--main-color);
     color: var(--light-color);
     width: fit-content;
+    transition: background 0.5s cubic-bezier(0.5, 0, 0.01, 1);
 }
 
-header .right-side,
-header .left-side {
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    --bs-btn-active-color: var(--light-color);
+    --bs-btn-active-bg: var(--main-400-color);
+    --bs-btn-active-border-color: none;
+}
+
+main .right-side,
+main .left-side {
     flex-basis: 100%;
 }
 
@@ -180,6 +186,78 @@ h1 span, .left-side p {
 .carousel-indicators .active {
     background-color: var(--main-color);
 }
+
+.section {
+    height: 100vh;
+    align-content: center;
+}
+
+.second-section .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+    align-items: start;
+    justify-content: center;
+}
+
+.second-section .col {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    align-items: start;
+    text-align: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+.second-section .col img {
+    grid-row: 1/2;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.second-section .col:first-child img {
+    justify-self: start;
+}
+
+.second-section .col:nth-child(2) img {
+    justify-self: center;
+    align-self: start;
+}
+
+.second-section .col:last-child img {
+    justify-self: start;
+    align-self: start;
+}
+
+.second-section .col h2 {
+    font-size: 2em;
+    color: var(--heading-color);
+    grid-row: 2/3;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.second-section .col p {
+    color: var(--paragraph-color);
+    grid-row: 3/4;
+    font-size: 1em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1024px) {
     .navbar .container-fluid .navbar-toggler {
