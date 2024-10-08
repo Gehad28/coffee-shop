@@ -1,0 +1,203 @@
+:root {
+    /* _____Colors_____ */
+    /* Semantic */
+    --success-color: #43936C;
+    --info-color: #03539E;
+    --danger-color: #E33131;
+    --warning-color: #EB9525;
+    /* Neutral */
+    --light-color: #FEFEFE;
+    --medium-color: #F0F0F0;
+    --dark-color: #3C3C3C;
+    /* Text */
+    --heading-color: #3C3C3C;
+    --paragraph-color: #555555;
+    --non-active-color: #868686;
+    --disabled-color: #CACACA;
+    /* Brand */
+    --main-50-color: #EFEBE9;
+    --main-100-color: #D7CCC8;
+    --main-200-color: #BCAAA4;
+    --main-300-color: #A1887F;
+    --main-400-color: #8D6E63;
+    --main-500-color: #795548;
+    --main-600-color: #6D4C41;
+    --main-700-color: #5D4037;
+    --main-800-color: #4E342E;
+    --main-900-color: #3E2723;
+    /* Secondary */
+    --secondary-50-color: #E6EFF3;
+    --secondary-100-color: #C7D6DB;
+    --secondary-200-color: #A6BBC1;
+    --secondary-300-color: #839FA8;
+    --secondary-400-color: #6A8A95;
+    --secondary-500-color: #507783;
+    --secondary-600-color: #456872;
+    --secondary-700-color: #37545D;
+    --secondary-800-color: #2A4149;
+    --secondary-900-color: #1A2C32;
+
+    --main-color: var(--main-700-color);
+
+    /* _____Fonts_____ */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+header {
+    height: 100vh;
+    background-color: var(--main-50-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text, nav a{
+    color: var(--main-color) !important;
+    font-size: 1.2em !important;
+}
+
+.logo-text {
+    font-weight: var(--font-semi-bold);
+    font-size: 1.5em !important;
+    margin-top: 12px !important;
+}
+
+.logo-span {
+    color: var(--main-400-color);
+}
+
+.navbar-brand {
+    margin-right: 0 !important;
+}
+
+nav form {
+    border: 1.5px solid var(--main-color);
+    border-radius: 25px;
+    padding: 0 0.4rem;
+}
+
+input[type="search"] {
+    border: none;
+    background-color: transparent;
+    color: var(--main-color) !important;
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+input[type="search"]:focus {
+    border: none !important;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.btn-search {
+    border: none;
+}
+
+.nav-item .active {
+    color: var(--main-900-color) !important;
+    font-weight: var(--font-medium) !important;
+}
+
+.nav-item .nav-link:hover {
+    color: var(--main-400-color) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    color: var(--main-color);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+#badge {
+    background-color: var(--danger-color);
+    color: var(--light-color);
+}
+
+header .container {
+    flex: auto;
+    gap: 6rem;
+    color: var(--main-color);
+}
+
+.btn-solid,
+.btn-solid:hover {
+    background-color: var(--main-color);
+    color: var(--light-color);
+    width: fit-content;
+}
+
+header .right-side,
+header .left-side {
+    flex-basis: 100%;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: var(--font-bold);
+}
+
+h1 span, .left-side p {
+    color: var(--main-400-color);
+}
+
+.left-side p {
+    font-size: 1.5em;
+    width: 80%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    padding: 0;
+    background-color: var(--light-color);
+}
+
+.carousel-indicators .active {
+    background-color: var(--main-color);
+}
+
+@media (max-width: 1024px) {
+    .navbar .container-fluid .navbar-toggler {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .container-fluid .navbar-toggler {
+        order: 0;
+    }
+
+    .navbar .container-fluid .header-wrap {
+        flex-basis: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .navbar .container-fluid .search-form {
+        flex: 1;
+    }
+}
