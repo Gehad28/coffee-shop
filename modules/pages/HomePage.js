@@ -11,7 +11,7 @@ export default class HomePage extends HTMLElement {
         this.root.appendChild(styles);
 
         async function loadCSS() {
-            const request = await fetch("modules/pages/HomePage.css");
+            const request = await fetch("/modules/pages/HomePage.css");
             styles.textContent = await request.text();
         }
         loadCSS();
@@ -57,7 +57,7 @@ export default class HomePage extends HTMLElement {
                 const carouselPhoto = document.createElement("div");
                 carouselPhoto.classList.add("carousel__photo");
                 const image = document.createElement("img");
-                image.src = `images/${img.img}`;
+                image.src = `/images/${img.img}`;
                 carouselPhoto.appendChild(image);
                 const indicator = document.createElement("div");
                 indicator.classList.add("carousel__button");
