@@ -329,9 +329,9 @@ h1 span, .left-side p {
     }
 
     .third-section .menu-container {
-        margin-top: 0;
+        margin-top: 1rem;
         width: 100%;
-        padding: 0 calc((100% - 427px) / 2);
+        padding: 0 calc((100% - 420px) / 2);
         gap: 0.5rem;
     }
 
