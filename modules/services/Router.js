@@ -21,6 +21,7 @@ const Router = {
         switch(route) {
             case "/":
                 pageElement = document.createElement("home-page");
+                console.log("Router");
                 break;
             case "/menu":
                 break;

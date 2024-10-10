@@ -2,6 +2,8 @@ export default class HomePage extends HTMLElement {
     constructor() {
         super();
 
+        console.log("HopePage");
+
         this.root = this.attachShadow({ mode: "open" });
 
         const template = document.getElementById("home-page-template");
