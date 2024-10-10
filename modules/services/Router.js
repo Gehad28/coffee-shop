@@ -19,7 +19,7 @@ const Router = {
         }
         let pageElement = null;
         switch(route) {
-            case "./":
+            case "/coffee-shop/":
                 pageElement = document.createElement("home-page");
                 break;
             case "./menu":
