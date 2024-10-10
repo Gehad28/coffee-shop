@@ -21,6 +21,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .main-section .container {
@@ -266,7 +267,7 @@ h1 span, .left-side p {
     }
 
     .carousel-indicators {
-        top: calc(45% + 170px - 5%);
+        top: calc(45% + 170px - 10%);
         left: calc(50% + 207px);
         transform: translateX(-26.5px);
     }
@@ -317,7 +318,7 @@ h1 span, .left-side p {
     }
 
     .carousel-indicators {
-        top: calc(25% + 175px - 5%);
+        top: calc(25% + 175px - 10%);
         left: 50%;
     }
 
@@ -361,7 +362,7 @@ h1 span, .left-side p {
     }
 
     .carousel-indicators {
-        top: calc(25% + 160px - 5%);
+        top: calc(25% + 160px - 20%);
     }
 
     .third-section {
@@ -379,7 +380,7 @@ h1 span, .left-side p {
     }
     
     .carousel-indicators {
-        top: calc(25% + 139px - 5%);
+        top: calc(25% + 139px - 20%);
     }
 }
 
@@ -389,6 +390,6 @@ h1 span, .left-side p {
     }
 
     .carousel-indicators {
-        top: calc(25% + 130px - 5%);
+        top: calc(25% + 130px - 20%);
     }
 }
