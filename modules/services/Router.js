@@ -19,15 +19,14 @@ const Router = {
         }
         let pageElement = null;
         switch(route) {
-            case "/":
+            case "./":
                 pageElement = document.createElement("home-page");
-                console.log("Router");
                 break;
-            case "/menu":
+            case "./menu":
                 break;
-            case "/history":
+            case "./history":
                 break;
-            case "/account":
+            case "./account":
                 break;
         }
         if (pageElement) {
