@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Cocoa Caramel Latte",
+        "img": "cocoa-caramel-latte.png",
+        "description": "Steamed milk with mocha and caramel sauces",
+        "price": "Rp35.500"
+    },
+    {
+        "id": 2,
+        "name": "Nitro Cold Brew",
+        "img": "nitro-cold- brew.png",
+        "description": "Cold brew with nitrogen, without sugar, velvety crema.",
+        "price": "Rp31.000"
+    },
+    {
+        "id": 3,
+        "name": "Caffe Mocha",
+        "img": "caffe-mocha.png",
+        "description": "Espresso with mocha sauce, milk and  whipped cream.",
+        "price": "Rp29.000"
+    },
+    {
+        "id": 4,
+        "name": "Coffee Milk",
+        "img": "coffee-milk.png",
+        "description": "Ice americano + fresh milk ",
+        "price": "Rp25.000"
+    },
+    {
+        "id": 5,
+        "name": "Caramel Latte",
+        "img": "caramel-latte.png",
+        "description": "Espresso, Fresh Milk and Caramel",
+        "price": "Rp25.000"
+    },
+    {
+        "id": 6,
+        "name": "Flat White",
+        "img": "flat-white.png",
+        "description": "Smooth ristretto shots of espresso with milk",
+        "price": "Rp25.000"
+    },
+    {
+        "id": 7,
+        "name": "Machiato",
+        "img": "machiato.png",
+        "description": "Espresso and cream machiato",
+        "price": "Rp18.000"
+    },
+    {
+        "id": 8,
+        "name": "Caramel Machiato",
+        "img": "charamel-machiato.png",
+        "description": "Espresso, Fresh Milk and Machiato Cream",
+        "price": "Rp24.000"
+    }
+]

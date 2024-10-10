@@ -20,7 +20,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid ps-5 pe-5">
+            <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="/">
                     <img src="/images/logo.svg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
                     <p class="m-auto logo-text">
@@ -34,6 +34,9 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu">Menu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/history">History</a>
@@ -66,9 +69,12 @@
     </header>
 
     <main>
+    </main>
+
+    <template id="home-page-template">
         <section class="main-section">
-            <div class="container d-flex align-items-center w-100 justify-content-center">
-                <div class="left-side d-flex flex-column gap-4">
+            <div class="container">
+                <div class="left-side">
                     <h1>Enjoy your <span>coffee</span> before your activity</h1>
                     <p>Boost your productivity and build your mood with a glass of coffee in the morning</p>
                     <button type="button" class="btn btn-solid">
@@ -81,22 +87,9 @@
                     </button>
                 </div>
                 <div class="right-side">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <!-- Images should be added in JS -->
-                            <div class="carousel-item active">
-                                <img src="images/promo-1.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/promo-2.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/promo-3.png" class="d-block w-100" alt="...">
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <div class="carousel-indicators">
                             </div>
                         </div>
                     </div>
@@ -105,24 +98,53 @@
         </section>
 
         <section class="section second-section">
-            <div class="container text-center">
+            <div class="container">
                 <div class="col">
                     <img src="images/ilustrasi 1.svg" alt="">
-                    <h2>Choose and customize your Drinks</h2>
-                    <p>Customize your own drink exactly how you like it by adding any topping you like!</p>
+                    <div>
+                        <h2>Choose and customize your Drinks</h2>
+                        <p>Customize your own drink exactly how you like it by adding any topping you like!</p>
+                    </div>
                 </div>
                 <div class="col">
                     <img src="images/ilustrasi 2.svg" alt="">
-                    <h2>Quickly and easly</h2>
-                    <p>You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone.</p>
+                    <div>
+                        <h2>Quickly and easly</h2>
+                        <p>You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone.</p>
+                    </div>
                 </div>
                 <div class="col">
                     <img src="images/ilustrasi 3.svg" alt="">
-                    <h2>Get and Redeem Voucher</h2>
-                    <p>Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!</p>
+                    <div>
+                        <h2>Get and Redeem Voucher</h2>
+                        <p>Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!</p>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
+
+        <section class="section third-section">
+            <div class="container">
+                <h2>Most Popular</h2>
+                <div class="menu-container" id="menu">
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="product-card-template">
+        <article>
+            <a href="/">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <button class="btn btn-solid price"></button>
+                    </div>
+                </div>
+            </a>
+        </article>
+    </template>
 </body>
 </html>
