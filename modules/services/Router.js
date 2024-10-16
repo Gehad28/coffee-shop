@@ -22,11 +22,18 @@ const Router = {
             case "/coffee-shop/":
                 pageElement = document.createElement("home-page");
                 break;
-            case "./menu":
+            case "./menu":  // /coffee-shop/
                 break;
-            case "./history":
+            case "./cart": // /coffee-shop/
+                pageElement = document.createElement("checkout-page");
                 break;
-            case "./account":
+            // case "./account":
+            //     break;
+            default: 
+                if (route.startsWith("./product-")) {
+                    pageElement = document.createElement("details-page");
+                    pageElement.dataset.productId = route.substring(route.lastIndexOf("-")+1);
+                }
                 break;
         }
         if (pageElement) {

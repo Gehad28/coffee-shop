@@ -6,6 +6,9 @@ import API from "./modules/services/API.js";
 // Pages
 import "./modules/pages/HomePage.js";
 import "./modules/components/ProducItem.js";
+import "./modules/pages/DetailsPage.js";
+import "./modules/components/CartItem.js";
+import "./modules/pages/CheckoutPage.js";
 
 
 window.app = {};
@@ -17,4 +20,26 @@ window.addEventListener("DOMContentLoaded", () => {
     app.router.init();
     loadMenu();
     loadCarouel();
+});
+
+window.addEventListener("appcartchange", e => {
+    const badge = document.querySelector("#badge");
+    const badgeText = badge.querySelector("span");
+    const quantity = app.store.cart.reduce((acc, item) => acc + item.quantity, 0);
+    badgeText.textContent = quantity;
+    badge.hidden = quantity == 0;
+});
+
+window.addEventListener("scroll", e => {
+    const nav = document.querySelector("nav");
+    if (window.scrollY > nav.offsetTop) {
+        nav.classList.add("nav-fixed");
+    }
+    else {
+        nav.classList.remove("nav-fixed");
+    }
+});
+
+document.getElementById("cart-btn").addEventListener("click", e => {
+    app.router.go("/cart");
 });

@@ -38,12 +38,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/coffee-shop/menu">Menu</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/coffee-shop/history">History</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/coffee-shop/account">Account</a>
-                        </li>
                     </ul>
                 </div>
                 <div class="header-wrap d-flex gap-4 align-items-center">
@@ -53,14 +47,14 @@
                             <img src="images/fi_search.svg" alt="search icon">
                         </button>
                     </form>
-                    <button type="button" class="btn cart position-relative">
+                    <button type="button" class="btn cart position-relative" id="cart-btn">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="#5D4037" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="#5D4037" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="#5D4037" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <span class="position-absolute top-10 start-80 translate-middle p-2 rounded-circle" id="badge" hidden>
-                            <span class="visually-hidden">2</span>
+                        <span class="position-absolute start-80 translate-middle rounded-circle badge" id="badge" hidden>
+                            <span >2</span>
                         </span>
                     </button>
                 </div>
@@ -132,6 +126,16 @@
         </section>
     </template>
 
+    <template id="menu-page-template">
+        <section>
+            <div class="container">
+                <h2>Menu</h2>
+                <div class="menu-container" id="menu">
+                </div>
+            </div>
+        </section>
+    </template>
+
     <template id="product-card-template">
         <article>
             <a href="/">
@@ -145,6 +149,157 @@
                 </div>
             </a>
         </article>
+    </template>
+
+    <template id="details-page-template">
+        <section>
+            <div class="container">
+                <div class="card">
+                    <div class="image">
+                        <img src="" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <div class="section">
+                            <div class="card-title">
+                                <h5 class="title"></h5>
+                                <p class="price"></p>
+                            </div>
+                            <div class="description">
+                                <p class="desc-text"></p>
+                                <div class="quantity">
+                                    <button class="btn btn-remove"></button>
+                                    <p>1</p>
+                                    <button class="btn btn-add"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="options section">
+                            <p>Customize</p>
+                            <div class="variant">
+                                <p>Variant</p>
+                                <div class="btn-group">
+                                    <input type="radio" class="radio" id="var-btnradio1" name="var-btnradio" value="Ice" checked>
+                                    <label for="var-btnradio1" class="btn btn-option">Ice</label>
+                                    <input type="radio" class="radio" id="var-btnradio2" name="var-btnradio" value="Hot">
+                                    <label for="var-btnradio2" class="btn btn-option">Hot</label>
+                                </div>
+                            </div>
+                            <div class="size">
+                                <p>Size</p>
+                                <div class="btn-group">
+                                    <input type="radio" class="radio" id="size-btnradio1" name="size-btnradio" value="Regular" checked>
+                                    <label for="size-btnradio1" class="btn btn-option">Regualr</label>
+                                    <input type="radio" class="radio" id="size-btnradio2" name="size-btnradio" value="Medium">
+                                    <label for="size-btnradio2" class="btn btn-option">Medium</label>
+                                    <input type="radio" class="radio" id="size-btnradio3" name="size-btnradio" value="Large">
+                                    <label for="size-btnradio3" class="btn btn-option">Large</label>
+                                </div>
+                            </div>
+                            <div class="sugar">
+                                <p>Sugar</p>
+                                <div class="btn-group">
+                                    <input type="radio" class="radio" id="su-btnradio1" name="su-btnradio" value="Normal" checked>
+                                    <label for="su-btnradio1" class="btn btn-option">Normal</label>
+                                    <input type="radio" class="radio" id="su-btnradio2" name="su-btnradio" value="Less">
+                                    <label for="su-btnradio2" class="btn btn-option">Less</label>
+                                </div>
+                            </div>
+                            <div class="ice">
+                                <p>Ice</p>
+                                <div class="btn-group">
+                                    <input type="radio" class="radio" id="ice-btnradio1" name="ice-btnradio" value="Normal" checked>
+                                    <label for="ice-btnradio1" class="btn btn-option">Normal</label>
+                                    <input type="radio" class="radio" id="ice-btnradio2" name="ice-btnradio" value="Less">
+                                    <label for="ice-btnradio2" class="btn btn-option">Less</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total section">
+                            <div class="left">
+                                <p>Total</p>
+                                <p class="total-price"></p>
+                            </div>
+                            <button class="btn btn-primary">Add Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="checkout-page-template">
+        <section>
+            <div class="container">
+                <div class="empty-cart">
+                    <p>Your cart is empty.</p>
+                </div>
+                <div class="cart">
+                    <h2>Checkout</h2>
+                    <div class="cart-items">
+                    </div>
+                    <div class="info">
+                        <h3>Delivary Information</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" placeholder="Address">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="total section">
+                        <div class="left">
+                            <p>Total</p>
+                            <p class="total-price"></p>
+                        </div>
+                        <button class="btn btn-primary">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="cart-item-template">
+        <div class="cart-item">
+            <div class="image">
+                <div class="bg-circle"></div>
+                <img src="" alt="">
+            </div>
+            <div class="order-details">
+                <div class="title">
+                    <h5></h5>
+                    <p></p>
+                </div>
+                <div class="details">
+                    <p class="custom-order"></p>
+                    <p class="quantity-no"></p>
+                </div>
+                <div class="actions">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 5H4.16667H17.5" stroke="#868686" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66699 4.99984V3.33317C6.66699 2.89114 6.84259 2.46722 7.15515 2.15466C7.46771 1.8421 7.89163 1.6665 8.33366 1.6665H11.667C12.109 1.6665 12.5329 1.8421 12.8455 2.15466C13.1581 2.46722 13.3337 2.89114 13.3337 3.33317V4.99984M15.8337 4.99984V16.6665C15.8337 17.1085 15.6581 17.5325 15.3455 17.845C15.0329 18.1576 14.609 18.3332 14.167 18.3332H5.83366C5.39163 18.3332 4.96771 18.1576 4.65515 17.845C4.34259 17.5325 4.16699 17.1085 4.16699 16.6665V4.99984H15.8337Z" stroke="#868686" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.667 9.1665V14.1665" stroke="#868686" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.33301 9.1665V14.1665" stroke="#868686" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <!-- <div class="quantity">
+                        <button class="btn btn-remove" disabled></button>
+                        <p>1</p>
+                        <button class="btn btn-add"></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
     </template>
 </body>
 </html>
