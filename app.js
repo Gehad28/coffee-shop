@@ -41,5 +41,5 @@ window.addEventListener("scroll", e => {
 });
 
 document.getElementById("cart-btn").addEventListener("click", e => {
-    app.router.go("/cart");
+    app.router.go("./cart");
 });
