@@ -27,7 +27,7 @@ export default class DetailsPage extends HTMLElement {
     async render() {
         if (this.dataset.productId) {
             this.product = await getProductById(this.dataset.productId);
-            this.root.querySelector("img").src = `/data/images/${this.product.img}`;
+            this.root.querySelector("img").src = `./data/images/${this.product.img}`;
             this.root.querySelector("h5").textContent = this.product.name;
             this.root.querySelector(".price").textContent = `Rp${this.product.price}`;
             this.root.querySelector(".desc-text").textContent = this.product.description;

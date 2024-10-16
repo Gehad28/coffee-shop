@@ -11,7 +11,7 @@ export default class CartItem extends HTMLElement {
         this.appendChild(content);
 
         const item = JSON.parse(this.dataset.item);
-        this.querySelector("img").src = `/data/images/${item.product.img}`;
+        this.querySelector("img").src = `./data/images/${item.product.img}`;
         this.querySelector("h5").textContent = item.product.name;
         this.querySelector(".title>p").textContent = item.product.price;
         this.querySelector(".custom-order").textContent = item.customOrder;
