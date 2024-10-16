@@ -60,6 +60,7 @@ export default class CheckoutPage extends HTMLElement {
             this.#user.email = "";
             this.#user.phone = "";
             this.#user.address = "";
+            app.store.cart = [];
 
             // Send to Server
         });
