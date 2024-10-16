@@ -15,7 +15,7 @@ export default class ProductItem extends HTMLElement {
         this.querySelector(".price").textContent = `Rp${product.price}`;
         this.querySelector("img").src = `./data/images/${product.img}`;
         this.querySelector("a").addEventListener("click", e => {
-            app.router.go(`./product/${product.id}`);
+            app.router.go(`product/${product.id}`);
             e.preventDefault();
         });
     }

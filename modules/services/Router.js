@@ -22,15 +22,15 @@ const Router = {
             case "/coffee-shop/":
                 pageElement = document.createElement("home-page");
                 break;
-            case "/coffee-shop/menu":  // /coffee-shop/
+            case "menu":  // /coffee-shop/
                 break;
-            case "/coffee-shop/cart": // /coffee-shop/
+            case "cart": // /coffee-shop/
                 pageElement = document.createElement("checkout-page");
                 break;
             // case "./account":
             //     break;
             default: 
-                if (route.startsWith("/coffee-shop/product-")) {
+                if (route.startsWith("product-")) {
                     pageElement = document.createElement("details-page");
                     pageElement.dataset.productId = route.substring(route.lastIndexOf("-")+1);
                 }
