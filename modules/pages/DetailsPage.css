@@ -196,38 +196,25 @@ input[type="radio"]:checked + .btn-option {
 }
 
 @media (max-width: 768px) {
-    :host {
-        font-size: 10px;
+    .card-body .card-title,
+    .description {
+        flex-direction: column;
+        align-items: start;
     }
 
-    .card {
-        min-width: 100%;
-        margin-bottom: 8rem;
-        font-size: 8px;
+    .description .quantity {
+        width: fit-content;
     }
 
-    .card-title .title,
-    .card-title .price {
-        font-size: 2em;
+    .card .options>div {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
     }
 
-    .btn-remove::before {
-        width: 1em;
-        height: 0.2em;
-    }
-    
-    .btn-add::before {
-        width: 1em;
-        height: 0.2em;
-    }
-    
-    .btn-add::after {
-        width: 0.3em;
-        height: 1em;
-    }
-
-    .description .quantity button {
-        padding: 1rem 1.2rem;
+    .btn-group {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
