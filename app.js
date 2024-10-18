@@ -32,8 +32,8 @@ window.addEventListener("appcartchange", e => {
 
 window.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector("nav");
-    const scrollY = window.scrollY || window.pageYOffset;
     window.addEventListener("scroll", e => {
+        let scrollY = window.scrollY || window.pageYOffset;
         if (scrollY > nav.offsetTop) {
             nav.classList.add("nav-fixed");
         }
