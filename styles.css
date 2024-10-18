@@ -156,6 +156,14 @@ a {
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        font-size: 8px;
+    }
+    
     .navbar .container-fluid {
         padding: 0 calc((100% - 427px) / 2);
     }
