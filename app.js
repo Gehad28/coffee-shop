@@ -30,14 +30,16 @@ window.addEventListener("appcartchange", e => {
     badge.hidden = quantity == 0;
 });
 
-window.addEventListener("scroll", e => {
-    const nav = document.querySelector("nav");
-    if (window.scrollY > nav.offsetTop) {
-        nav.classList.add("nav-fixed");
-    }
-    else {
-        nav.classList.remove("nav-fixed");
-    }
+window.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("scroll", e => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > nav.offsetTop) {
+            nav.classList.add("nav-fixed");
+        }
+        else {
+            nav.classList.remove("nav-fixed");
+        }
+    });
 });
 
 document.getElementById("cart-btn").addEventListener("click", e => {
