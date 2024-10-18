@@ -196,9 +196,9 @@ input[type="radio"]:checked + .btn-option {
 }
 
 @media (max-width: 768px) {
-    html {
+    /* html {
         font-size: 10px;
-    }
+    } */
 
     body {
         font-size: 8px;
