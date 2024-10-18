@@ -196,9 +196,14 @@ input[type="radio"]:checked + .btn-option {
 }
 
 @media (max-width: 768px) {
+    :root {
+        font-size: 10px;
+    }
+    
     .card {
         min-width: 100%;
         margin-bottom: 8rem;
+        font-size: 8px;
     }
 
     .card-title .title,
