@@ -125,68 +125,6 @@ h2 {
     cursor: pointer;
 }
 
-/* .actions .quantity {
-    display: flex;
-    border: 2px solid var(--disabled-color);
-    border-radius: 5px;
-}
-
-.actions .quantity button {
-    padding: 1rem 1.2rem;
-}
-
-.actions .quantity p {
-    font-weight: var(--font-medium);
-    width: 3rem;
-    text-align: center;
-    align-content: center;
-}
-
-.btn-remove, .btn-add {
-    position: relative;
-}
-
-.btn-remove {
-    border-right: 2px solid var(--disabled-color); 
-}
-
-.btn-add {
-    border-left: 2px solid var(--disabled-color);
-}
-
-.btn-remove::before,
-.btn-add::before,
-.btn-add::after {
-    content: "";
-    background-color: var(--main-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 20px;
-}
-
-.btn-remove::before {
-    width: 1.5em;
-    height: 0.3em;
-}
-
-.btn-add::before {
-    width: 1.5em;
-    height: 0.3em;
-}
-
-.btn-add::after {
-    width: 0.3em;
-    height: 1.5em;
-}
-
-.btn-add:disabled::before,
-.btn-add:disabled::after,
-.btn-remove:disabled::before {
-    background-color: var(--disabled-color);
-} */
-
 .cart .info {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 15%);
     padding: 2rem;

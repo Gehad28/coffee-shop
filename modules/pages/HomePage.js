@@ -34,10 +34,6 @@ export default class HomePage extends HTMLElement {
         if (app.store.menu) {
             const menu = this.root.querySelector("#menu");
             menu.innerHTML = "";
-            // let mostPopularMenu = app.store.menu.slice(0, 6);
-            // if (window.innerWidth <= 768) {
-            //     mostPopularMenu = app.store.menu;
-            // }
             for (let product of app.store.menu) {
                 const item = document.createElement("product-item");
                 item.dataset.product = JSON.stringify(product);
