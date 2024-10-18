@@ -55,7 +55,7 @@ export default class CheckoutPage extends HTMLElement {
     setFormBindings(form) {
         this.root.querySelector(".btn-primary").addEventListener("click", e => {
             // After Checkout --------
-            if (form.elements) {
+            if (form.elements.name.value && form.elements.email.value && form.elements.phone.value && form.elements.address.value) {
                 alert("Thank you for your order.");
             }
             this.#user.name = "";
