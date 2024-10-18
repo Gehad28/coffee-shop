@@ -46,7 +46,7 @@ export default class HomePage extends HTMLElement {
 
             this.root.querySelector("#order-btn").addEventListener("click", e => {
                 const targetPos = this.root.querySelector("#menu");
-                const topPos = targetPos.getBoundingClientRect().top + window.pageYOffset;
+                const topPos = targetPos.getBoundingClientRect().top + window.pageYOffset - 280;
                 window.scrollTo({
                     top: topPos,
                     behavior: "smooth"

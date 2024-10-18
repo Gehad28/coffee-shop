@@ -22,13 +22,9 @@ const Router = {
             case "/coffee-shop/":
                 pageElement = document.createElement("home-page");
                 break;
-            case "menu":  // /coffee-shop/
-                break;
-            case "cart": // /coffee-shop/
+            case "cart": 
                 pageElement = document.createElement("checkout-page");
                 break;
-            // case "./account":
-            //     break;
             default: 
                 if (route.startsWith("product-")) {
                     pageElement = document.createElement("details-page");
