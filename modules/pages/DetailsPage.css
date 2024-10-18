@@ -16,6 +16,7 @@
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
+    height: 100vh;
 }
 
 .card .image {
@@ -87,6 +88,7 @@
     color: var(--main-color);
     width: 3rem;
     text-align: center;
+    align-content: center;
 }
 
 .btn-remove, .btn-add {
@@ -192,6 +194,44 @@ input[type="radio"]:checked + .btn-option {
 
 .btn-primary:active {
     background-color: var(--main-400-color);
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        font-size: 8em;
+    }
+
+    .card {
+        min-width: 100%;
+    }
+
+    .card-title .title,
+    .card-title .price {
+        font-size: 2em;
+    }
+
+    .btn-remove::before {
+        width: 1em;
+        height: 0.2em;
+    }
+    
+    .btn-add::before {
+        width: 1em;
+        height: 0.2em;
+    }
+    
+    .btn-add::after {
+        width: 0.3em;
+        height: 1em;
+    }
+
+    .description .quantity button {
+        padding: 1rem 1.2rem;
+    }
 }
 
 @media (max-width: 425px) {
