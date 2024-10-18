@@ -46,6 +46,10 @@
     --font-bold: 700;
 }
 
+html {
+    min-width: 620px;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;

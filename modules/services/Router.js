@@ -53,6 +53,7 @@ const Router = {
         }
 
         window.scrollX = 0;
+        window.scrollY = 0;
     }
 }
 
