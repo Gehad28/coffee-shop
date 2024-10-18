@@ -57,14 +57,14 @@ export default class CheckoutPage extends HTMLElement {
             // After Checkout --------
             if (form.elements.name.value && form.elements.email.value && form.elements.phone.value && form.elements.address.value) {
                 alert("Thank you for your order.");
-            }
-            this.#user.name = "";
-            this.#user.email = "";
-            this.#user.phone = "";
-            this.#user.address = "";
-            app.store.cart = [];
+                this.#user.name = "";
+                this.#user.email = "";
+                this.#user.phone = "";
+                this.#user.address = "";
+                app.store.cart = [];
 
-            // Send to Server
+                // Send to Server
+            }
         });
 
         Array.from(form.elements).forEach(element => {
