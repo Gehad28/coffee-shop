@@ -17,7 +17,9 @@ window.addEventListener("DOMContentLoaded", () => {
     app.router.init();
     loadMenu();
     loadCarouel();
-    app.store.cart = localStorage.getItem("cart");
+    if (localStorage.getItem("cart")) {
+        app.store.cart = localStorage.getItem("cart");
+    }
 });
 
 window.addEventListener("appcartchange", e => {
