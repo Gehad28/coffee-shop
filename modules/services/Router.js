@@ -25,6 +25,9 @@ const Router = {
             case "cart": 
                 pageElement = document.createElement("checkout-page");
                 break;
+            case "checkout": 
+                pageElement = document.createElement("thankyou-page");
+                break;
             default: 
                 if (route.startsWith("product-")) {
                     pageElement = document.createElement("details-page");
