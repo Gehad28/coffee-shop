@@ -6,11 +6,17 @@ export default class CartItem extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log("Cart Item");
         const template = document.getElementById("cart-item-template");
         const content = template.content.cloneNode(true);
         this.appendChild(content);
 
+        window.addEventListener("appcartchange", () => {
+            this.render();
+        })
+    }
+
+    render() {
+        console.log("Cart Item");
         const item = JSON.parse(this.dataset.item);
         this.querySelector("img").src = `./data/images/${item.product.img}`;
         this.querySelector("h5").textContent = item.product.name;
