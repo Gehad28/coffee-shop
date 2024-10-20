@@ -62,6 +62,7 @@ export default class CheckoutPage extends HTMLElement {
                 this.#user.phone = "";
                 this.#user.address = "";
                 app.store.cart = [];
+                localStorage.setItem("cart", JSON.stringify(app.store.cart));
                 app.router.go("checkout");
 
                 // Send to Server
