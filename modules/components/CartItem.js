@@ -6,6 +6,7 @@ export default class CartItem extends HTMLElement {
     }
 
     connectedCallback() {
+        console.log("Cart Item");
         const template = document.getElementById("cart-item-template");
         const content = template.content.cloneNode(true);
         this.appendChild(content);
