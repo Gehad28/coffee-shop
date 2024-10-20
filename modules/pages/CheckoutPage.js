@@ -65,6 +65,16 @@ export default class CheckoutPage extends HTMLElement {
 
                 // Send to Server
             }
+            else {
+                this.root.querySelectorAll(".form-group input").forEach(input => {
+                    if (!input.value) {
+                        input.classList.add("validate");
+                    }
+                    else {
+                        input.classList.remove("validate");
+                    }
+                });
+            }
         });
 
         Array.from(form.elements).forEach(element => {

@@ -165,6 +165,10 @@ h2 {
     outline: 1px solid var(--dark-color);
 }
 
+.form-group input.validate {
+    outline: 1px solid var(--danger-color);
+}
+
 .cart .total {
     display: flex;
     justify-content: space-between;
