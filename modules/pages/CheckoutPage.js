@@ -27,7 +27,10 @@ export default class CheckoutPage extends HTMLElement {
     connectedCallback() {
         window.addEventListener("appcartchange", () => {
             this.render();
-        })
+        });
+        if (localStorage.getItem("cart")) {
+            app.store.cart = JSON.parse(localStorage.getItem("cart"));
+        }
         this.render();
     }
 
