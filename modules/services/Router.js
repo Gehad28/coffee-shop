@@ -51,7 +51,6 @@ const Router = {
                     main.appendChild(pageElement);
                 }
             }
-            // Transition here
             changePage();
         }
 

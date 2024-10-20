@@ -6,10 +6,6 @@ import API from "./modules/services/API.js";
 // Pages
 import "./modules/pages/HomePage.js";
 import "./modules/components/ProducItem.js";
-// import "./modules/pages/DetailsPage.js";
-// import "./modules/components/CartItem.js";
-// import "./modules/pages/CheckoutPage.js";
-// import "./modules/pages/ThankyouPage.js";
 
 
 window.app = {};
@@ -21,6 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     app.router.init();
     loadMenu();
     loadCarouel();
+    app.store.cart = localStorage.getItem("cart");
 });
 
 window.addEventListener("appcartchange", e => {
