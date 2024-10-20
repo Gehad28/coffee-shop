@@ -9,6 +9,7 @@ import "./modules/components/ProducItem.js";
 import "./modules/pages/DetailsPage.js";
 import "./modules/components/CartItem.js";
 import "./modules/pages/CheckoutPage.js";
+import "./modules/pages/ThankyouPage.js";
 
 
 window.app = {};
