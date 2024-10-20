@@ -34,7 +34,6 @@ const Router = {
             default: 
                 if (route.startsWith("product-")) {
                     await import("../pages/DetailsPage.js");
-                    await import("../components/CartItem.js");
                     pageElement = document.createElement("details-page");
                     pageElement.dataset.productId = route.substring(route.lastIndexOf("-")+1);
                 }
