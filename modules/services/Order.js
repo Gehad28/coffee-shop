@@ -9,12 +9,12 @@ export async function addToCart(id, q, customOrder) {
     else {
         app.store.cart = [...app.store.cart, {product, quantity: q, customOrder: customOrder}];
     }
-    const array = Array.from(target[property].value);
+    const array = Array.from(app.store.cart);
     localStorage.setItem("cart", JSON.stringify(array));
 }
 
 export function removeFromCart(id) {
     app.store.cart = app.store.cart.filter(p => p.product.id != id);
-    const array = Array.from(target[property].value);
+    const array = Array.from(app.store.cart);
     localStorage.setItem("cart", JSON.stringify(array));
 }
