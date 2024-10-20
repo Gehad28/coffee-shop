@@ -13,7 +13,7 @@ const Router = {
         // Initial URL
         Router.go(location.pathname);
     },
-    go: (route, addToHistory=true) => {
+    go: async (route, addToHistory=true) => {
         if (addToHistory) {
             history.pushState({ route }, '', route);
         }
@@ -23,13 +23,17 @@ const Router = {
                 pageElement = document.createElement("home-page");
                 break;
             case "cart": 
+                await import("../modules/pages/CheckoutPage.js");
                 pageElement = document.createElement("checkout-page");
                 break;
             case "checkout": 
+                await import("../modules/pages/ThankyouPage.js");
                 pageElement = document.createElement("thankyou-page");
                 break;
             default: 
                 if (route.startsWith("product-")) {
+                    await import("../modules/pages/DetailsPage.js");
+                    await import("../modules/components/CartItem.js");
                     pageElement = document.createElement("details-page");
                     pageElement.dataset.productId = route.substring(route.lastIndexOf("-")+1);
                 }
