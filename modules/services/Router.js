@@ -24,6 +24,7 @@ const Router = {
                 break;
             case "cart": 
                 await import("../pages/CheckoutPage.js");
+                await import("../components/CartItem.js");
                 pageElement = document.createElement("checkout-page");
                 break;
             case "checkout": 

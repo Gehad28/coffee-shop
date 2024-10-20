@@ -41,7 +41,6 @@ export default class CheckoutPage extends HTMLElement {
             this.root.querySelector(".cart").style.display = "flex";
 
             let total = 0;
-            this.root.querySelector(".cart-items").innerHTML = "";
             for (let itemInCart of app.store.cart) {
                 const item = document.createElement("cart-item");
                 item.dataset.item = JSON.stringify(itemInCart);
