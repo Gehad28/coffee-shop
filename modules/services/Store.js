@@ -15,8 +15,6 @@ const proxiedStore = new Proxy(Store, {
         }
         if (property == "cart") {
             window.dispatchEvent(new Event("appcartchange"));
-            const array = Array.from(target[property].value);
-            localStorage.setItem("cart", JSON.stringify(array));
         }
         return true;
     },
